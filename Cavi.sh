@@ -20,7 +20,7 @@ ffmpeg -loglevel panic -y -i $tmpDir/a-0.wav -i $tmpDir/a-1.wav -i $tmpDir/a-2.w
 -i $tmpDir/a-4.wav -i $tmpDir/a-5.wav -i $tmpDir/a-6.wav -i $tmpDir/a-7.wav -i $tmpDir/a.wav \
 -i $tmpDir/a-9.wav \-filter_complex '[0:0][1:0][2:0][3:0]concat=n=10:v=0:a=1[out]' \-map '[out]' $tmpDir/audio.wav
 
-ffmpeg -loglevel panic -y -i /root/Cavi/tmp/output.mp4 -i /root/Cavi/tmp/audio.wav \-c:v copy -c:a aac -strict experimental k.mp4
+ffmpeg -loglevel panic -y -i $tmpDir/output.mp4 -i $tmpDir/audio.wav \-c:v copy -c:a aac -strict experimental k.mp4
 
 sudo youtube-upload --title="`wget -qO- $site/geturl.php?uuid=$id`" --description="$desc" k.mp4
 done
