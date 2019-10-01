@@ -26,4 +26,6 @@ sudo pip install --upgrade google-api-python-client progressbar2
 
 3. Run setup.py
 
-4. 
+4. Watch your channel grow
+
+This will create a video with random Hz tones and random pictures, stitch it together and upload to YT.
